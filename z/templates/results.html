@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator Results</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Generator Results</h1>
+        <br>
+        <h2>Generated Emails:</h2>
+        <br>
+        <ul>
+            {% for email_template in email_templates %}
+            <li>
+                <strong>Email {{ loop.index }}</strong>
+                <br><br>
+                {{ email_template }}
+                <br><br>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

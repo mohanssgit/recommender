@@ -1,0 +1,95 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #f0e8fb;
+    padding: 20px;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 800px; /* Set a maximum width for content */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+label,
+input[type="text"],
+textarea,
+input[type="submit"],
+.radio-options input[type="radio"] {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Expand the input fields to full width */
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #0078D4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #7600a5;
+}
+
+.radio-options input[type="radio"] {
+    display: none;
+}
+
+.radio-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-options label::before {
+    content: "\25A2"; /* You can use a square or other symbols as bullet points */
+    color: #0078D4;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.radio-options input[type="radio"]:checked + label::before {
+    content: "\2022"; /* Change to a filled square or other symbol when checked */
+    font-size: 1.4rem;
+    color: #0078D4;
+}

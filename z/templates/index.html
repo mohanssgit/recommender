@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create your marketing emails with AI</h2>
+        <br>
+        <h4>Introduce information about your business and the goal of the campaign, and we'll take care of the rest!</h4>
+        <br>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="campaign_goal">Campaign Goal:</label>
+                <div class="radio-options">
+                    <input type="radio" id="convince" name="campaign_goal" value="Convince to buy product" required>
+                    <label for="convince">Convince to buy product</label>
+
+                    <input type="radio" id="recover" name="campaign_goal" value="Recover churned customers" required>
+                    <label for="recover">Recover churned customers</label>
+
+                    <input type="radio" id="teach" name="campaign_goal" value="Teach a new concept" required>
+                    <label for="teach">Teach a new concept</label>
+
+                    <input type="radio" id="onboard" name="campaign_goal" value="Onboard new users" required>
+                    <label for="onboard">Onboard new users</label>
+
+                    <input type="radio" id="update" name="campaign_goal" value="Share product updates" required>
+                    <label for="update">Share product updates</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="brand_tone">Brand Tone:</label>
+                <div class="radio-options">
+                    <input type="radio" id="formal" name="brand_tone" value="Formal" required>
+                    <label for="formal">Formal</label>
+
+                    <input type="radio" id="informal" name="brand_tone" value="Informal" required>
+                    <label for="informal">Informal</label>
+
+                    <!-- Add other brand tone options here -->
+
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="industry">Industry:</label>
+                <input type="text" id="industry" name="industry" placeholder="Enter your industry...">
+            </div>
+            
+            <div class="form-group">
+                <label for="tell_us_more">Tell Us More:</label>
+                <textarea id="tell_us_more" name="tell_us_more" rows="4" placeholder="Provide additional details about your campaign..."></textarea>
+            </div>
+            
+            <input type="submit" value="Generate Emails">
+        </form>
+    </div>
+</body>
+</html>
